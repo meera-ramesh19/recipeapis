@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="This is where your description goes">
+  <meta name="keywords" content="one, two, three">
+
+  <title>Meals by Area</title>
+
+  <!-- external CSS link -->
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <link rel="stylesheet" href="area.css">
+  <link rel="stylesheet" href="../mobile/styles.css">
+  <script src="https://kit.fontawesome.com/46b13243e4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav>
+    <ul class="menu">
+      <li class="logo"><a href="#">Pairily</a></li>
+       <li class="item"><a href="../main/index.html">Home</a></li>
+       
+       <!-- <li class="item"><a href="../mealdb/mealdb.html"> Random Recipe </a></li> -->
+       <li class="item has-submenu">
+        <a class="tab-item" tabindex="0">Mealdb Recipes</a>
+        <ul class="submenu">
+          <li class="subitem"><a href="../mealdb/mealdb.html"> Random</a></li>
+          <li class="subitem"><a href="../mealsbyarea/area.html">Cuisine</a></li>
+          <li class="subitem"><a href="../mealsbyingredient/ingredient.html">Ingredient</a></li>
+          
+        </ul>
+      </li>
+      <li class="item has-submenu">
+        <a class="tab-item" tabindex="0">Edmam Nutrition</a>
+        <ul class="submenu">
+          <li class="subitem"><a href="../fooddatabase/fooddatabase.html">PackagedFoods</a></li>
+          <li class="subitem"><a href="../foodrecipes/foodrecipes.html">Recipes</a></li>
+        </ul>
+      </li>
+      <li class="item"><a href="../cocktaildb/cocktaildb.html">Cocktail</a></li>
+      <!-- <li class="item"><a href="../edmam/edmam.html">Edmam</a></li>
+       <li class="item"><a href="../fooddatabase/fooddatabase.html">PackagedFoodsNutrition</a></li>
+       <li class="item"><a href="../foodrecipes/foodrecipes.html">Recipe Nutrition</a></li> -->
+       <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+   </nav> 
+  <h1> Meals by Area</h1>
+  <div class="input-button">
+    <input type="text" id="search" name="" value="" placeholder="Ex: American or Italian"> 
+    <button type="button" name="button">Country</button>
+  </div>
+
+
+
+  <div class="container">
+   
+    <div id="recipeContainer"></div>
+  </div>
+
+  <!-- <p>video</p>
+  <div style="width:60%; min-width:480px">
+    <div class="videowrapper">
+      <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  </div>
+  </div> -->
+
+  <!-- <h2></h2>
+  <h3></h3> -->
+  <script type="text/javascript" src="area.js"></script>
+  <script type="text/javascript" src="../mobile/script.js"></script>
+</body>
