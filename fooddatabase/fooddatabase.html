@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Locator</title>
+    <link rel="stylesheet" href="../mobile/styles.css">
+    <link rel="stylesheet" href="fooddatabase.css" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <link rel="shortcut icon" href="assets/img/favicon.ico" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/46b13243e4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!--
+  Nutrition Analysis API Documentation -->
+<!-- //Full recipe analysis and individual -text analysis api are present -->
+<!-- : https://api.edamam.com/api/nutrition-details(full recipe)
+https://api.edamam.com/api/nutrition-data(individual text lines) -->
+
+
+
+<!-- Food Database API Documentation -->
+<!-- gives the The parser access point handles text search for foods as well as filters for the foods like presence specific nutrient content or exclusion of allergens.
+
+Search for a phrase or keyword using NLP to get food entities from it.
+Get basic nutrition facts and ingredients for each food
+Search for food by given nutrient quantity for 28 nutrients
+Search for foods within a given brand
+
+https://api.edamam.com/api/food-database/v2/parser -->
+
+<!--Gives the nutrients In the response to your parser request you receive the a food ID for each database match. Using the food ID and the measure URI, which parser provides,
+you can make a request to the nutrients access point. The nutrients access points returns nutrition with diet and health labels for a given quantity of the food.
+
+https://api.edamam.com/api/food-database/v2/nutrients-->
+<nav>
+  <ul class="menu">
+    <li class="logo"><a href="#">Pairily</a></li>
+     <li class="item"><a href="../main/index.html">Home</a></li>
+     
+     <!-- <li class="item"><a href="../mealdb/mealdb.html"> Random Recipe </a></li> -->
+     <li class="item has-submenu">
+      <a class="tab-item" tabindex="0">Mealdb Recipes</a>]
+      <ul class="submenu">
+        <li class="subitem"><a href="../mealdb/mealdb.html"> Random</a></li>
+        <li class="subitem"><a href="../mealsbyarea/area.html">Cuisine</a></li>
+        <li class="subitem"><a href="../mealsbyingredient/ingredient.html">Ingredient</a></li>
+      </ul>
+    </li>
+    <li class="item has-submenu">
+      <a class="tab-item" tabindex="0">Edmam Nutrition</a>
+      <ul class="submenu">
+        <li class="subitem"><a href="../fooddatabase/fooddatabase.html">PackagedFoods</a></li>
+        <li class="subitem"><a href="../foodrecipes/foodrecipes.html">Recipes</a></li>
+      </ul>
+    </li>
+    <li class="item"><a href="../cocktaildb/cocktaildb.html">Cocktail</a></li>
+    <!-- <li class="item"><a href="../edmam/edmam.html">Edmam</a></li>
+     <li class="item"><a href="../fooddatabase/fooddatabase.html">PackagedFoodsNutrition</a></li>
+     <li class="item"><a href="../foodrecipes/foodrecipes.html">Recipe Nutrition</a></li> -->
+     <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+  </ul>
+ </nav> 
+    <main>
+
+        <section class="input-container">
+          <div class="title-heading">
+            <h1 class="titles">Nutritional value of packaged foods</h1>
+            <h2 class="subtitle">Discover the nutritional information of 700,000+ foods!</h2"titles">
+
+          </div>
+
+           <form action="" id="search" name="search" class="search">
+                    <input type="text" class="search-term" size="50 "name="name" placeholder="Type a dish name..."/>
+                    <button type="submit" class="submit">SEARCH</button>
+           </form>
+
+       </section>
+
+    </main>
+    <section>
+      <div id="result"></div>
+    </section>
+
+        <footer class="footer">
+
+            <div id="edamam-badge" data-color="white"></div>
+        </footer>
+
+      <script src="https://developer.edamam.com/attribution/badge.js"></script>
+      <script src="../mobile/script.js"></script>
+      <script src="../fooddatabase/fooddatabase.js"></script>
+
+      </body>
+
+      </html>
