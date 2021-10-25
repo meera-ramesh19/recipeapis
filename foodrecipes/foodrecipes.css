@@ -1,0 +1,369 @@
+:root {
+  --modal-duration: 1s;
+  --modal-color: #de5e5e;
+}
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+
+body{
+  background:url('chilli.jpg') no-repeat fixed center;
+  background-size:cover;
+  margin: 0;
+  /* font-family: "Roboto", sans-serif;
+  font-size:2rem; */
+  color:black;
+}
+
+.input-container{
+  text-align:center;
+  margin: 0 auto;
+  margin:5rem 10rem;
+}
+
+.submit{
+  background:black;
+  padding: 2px 16px;
+  color:white;
+ 
+}
+.search-header{
+  text-align:center;
+    margin:0 auto;
+    padding:5rem;
+    color:black;
+}
+  .choices{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction:row;
+      flex-wrap: nowrap;
+
+    }
+
+
+  #mealtype{
+    padding:0.1rem 0.3rem;
+  }
+    .card-container {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      max-width:1024px;
+      margin:0 auto;
+
+
+    }
+
+    .card-wrapper{
+      width:80%;
+      display:block;
+      padding:2rem;
+      background:#fefeff;
+      margin:3rem;
+    }
+    .card-container:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .col {
+      display: flex;
+      justify-content: space-around;
+      align-items: space-around;
+    }
+
+
+    .card-details {
+      display: flex;
+      justify-content:space-between;
+      align-items: space-between;
+    }
+    .card-info{
+      text-align: left;
+      display:block;
+    }
+    .card-image{
+      text-align:right;
+      display:block;
+    }
+
+
+
+
+  .servings-time{
+    display:flex;
+    flex-direction:row;
+  }
+  .time{
+    display:block;
+    text-align:left;
+  }
+  .servings{
+    display:block;
+    text-align:left;
+  }
+  .images{
+    width:500px;
+    height:300px;
+    border:1px solid black;
+    border-radius:10px;
+  }
+  .container {
+   display:flex;
+   flex-direction:row;
+   flex-wrap:wrap;
+   width:90%;
+   padding:1.5rem 0;
+  }
+  .health{
+    text-align:left;
+  }
+
+  .recipe-card__nav{
+    padding-top:2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:space-between;
+
+  }
+  .ingredients{
+    position:relative;
+  }
+  .card-ingredients {
+    position:relative;
+    margin:0;
+    padding:0;
+    column-count: 2;
+    /* column-rule: dotted 1px #333; */
+    padding-left: 130px;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    /* list-style-type: none; */
+    text-align:left;
+  }
+
+  .card-ingredients li:before {
+    content: "•";
+  }
+
+  .ingredients > h4{
+    position:relative;
+    text-align: center;
+  }
+
+  footer {
+
+    text-align: center;
+    margin:2rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+  }
+  
+    div#edaman-badge {
+      margin-top: 1rem;
+    }
+  
+
+
+/******MODAL INFO***************/
+
+button {
+  background: none;
+  padding: 0em 0.9em;
+  color: #000;
+  border: 0.1em solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.button:hover {
+  background: none;
+  transition: border 1s;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255 0.5);
+}
+
+.modal-body {
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal-content {
+  margin: 0 auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 20px 60px;
+  background: black;
+  opacity: 0.8;
+  color: white;
+  text-align: center;
+}
+
+.modal-footer {
+  background: var(--modal-color);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+
+#nutritionfacts {
+  background-color: white;
+  border: 1px solid black;
+  padding: 3px;
+  width: 300px;
+  margin:0 auto;
+  text-align:center;
+}
+#nutritionfacts td {
+  color: black;
+  font-family: "Arial Black", "Helvetica Bold", sans-serif;
+  font-size: 8pt;
+  padding: 0;
+ 
+}
+#nutritionfacts td.header {
+  font-family: "Arial Black", "Helvetica Bold", sans-serif;
+  font-size: 28px;
+  white-space: nowrap;
+}
+#nutritionfacts div.label {
+  float: left;
+  font-family: "Arial Black", "Helvetica Bold", sans-serif;
+}
+#nutritionfacts div.serving {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  text-align: center;
+}
+#nutritionfacts div.weight {
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 1px;
+}
+#nutritionfacts div.dv {
+  display: inline;
+  float: right;
+  font-family: "Arial Black", "Helvetica Bold", sans-serif;
+}
+#nutritionfacts table.vitamins td {
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  width: 33%;
+}
+#nutritionfacts div.line {
+  border-top: 1px solid black;
+}
+#nutritionfacts div.labellight {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#nutritionfacts .highlighted {
+  border: 1px dotted grey;
+  padding: 2px;
+}
+
+
+
+/* .left{
+  display:none;
+}
+.right{
+  width:100%;
+  
+}
+.introPara{
+  font-size:1rem;
+} */
+
+
+/* Tablet menu */
+@media all and (min-width: 700px) {
+ 
+
+}
+/* Desktop menu */
+@media all and (min-width: 960px) {
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

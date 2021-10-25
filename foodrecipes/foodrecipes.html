@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Locator</title>
+    <link rel="stylesheet" href="foodrecipes.css" />
+    <link rel="stylesheet" href="../mobile/styles.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/46b13243e4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav>
+    <ul class="menu">
+      <li class="logo"><a href="#">Pairily</a></li>
+       <li class="item"><a href="../main/index.html">Home</a></li>
+       <!-- <li class="item"><a href="../mealdb/mealdb.html"> Random Recipe </a></li> -->
+       <li class="item has-submenu">
+        <a class="tab-item" tabindex="0">Mealdb Recipes</a>
+        <ul class="submenu">
+          <li class="subitem"><a href="../mealdb/mealdb.html"> Random</a></li>
+          <li class="subitem"><a href="../mealsbyarea/area.html">Cuisine</a></li>
+          <li class="subitem"><a href="../mealsbyingredient/ingredient.html">Ingredient</a></li>
+          
+        </ul>
+      </li>
+      <li class="item has-submenu">
+        <a class="tab-item" tabindex="0">Edmam Nutrition</a>
+        <ul class="submenu">
+          <li class="subitem"><a href="../fooddatabase/fooddatabase.html">PackagedFoods</a></li>
+          <li class="subitem"><a href="../foodrecipes/foodrecipes.html">Recipes</a></li>
+        </ul>
+      </li>
+      <li class="item"><a href="../cocktaildb/cocktaildb.html">Cocktail</a></li>
+      <!-- <li class="item"><a href="../edmam/edmam.html">Edmam</a></li>
+       <li class="item"><a href="../fooddatabase/fooddatabase.html">PackagedFoodsNutrition</a></li>
+       <li class="item"><a href="../foodrecipes/foodrecipes.html">Recipe Nutrition</a></li> -->
+       <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+   </nav> 
+     <main>
+
+        <section class="input-container">
+            <h3 class="search-header">Search Food Recipe</h3>
+           <form action="">
+            <div class="choices">
+                    <input type="text" class="search-term" size="30" placeholder='search for Recipe'/>
+                    <select id="mealtype">
+                        <option value="select" selected="selected" disabled>Select an option</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner.</option>
+                        <option value="snack">Snack</option>
+                         <option value="teatime">Teatime</option>
+                     </select>
+
+                    <button class="submit" onclick="submitForm(event)">Submit</button>
+             </div>
+           </form>
+       </section>
+
+     </main>
+    <!-- <select id="health">
+      <option value="none" selected hidden disabled>Select an option</option>
+      <option value="alcohol-cocktail">alochol-cocktail</option>
+      <option value="alcohol-free">alochol-free</option>
+      <option value="celery-free">celery-free</option>
+      <option value="crustacean-free">crustacean free.</option>
+      <option value="dairy-free">dairy-free.</option>
+      <option value="egg-free">egg-free.</option>
+      <option value="fish-free">fish-free.</option>
+      <option value="gluten-free">gluten-free.</option>
+      <option value="keto-friendly">keto-friendly.</option>
+      <option value="kosher">kosher.</option>
+      <option value="low-potassium">low-potassium.</option>
+      <option value="low-sugar">low-sugar.</option>
+      <option value="vegetarian">vegetarian.</option>
+      <option value="vegan">vegan.</option>
+       <option value="pescatarian">pescatarian.</option>
+      <option value="paleo">paleo.</option>
+      <option value="peanut-free">peanut-free.</option>
+       <option value="wheat-free">wheat-free.</option>
+       <option value="shellfish-free">shellfish-free.</option>
+
+         </select> -->
+         <!-- <select id="diet">
+           <option value="balanced">Balanced</option>
+           <option value="highfiber">High fiber</option>
+           <option value="highprotein">High Protein.</option>
+           <option value="lowcarb">Low carb.</option>
+           <option value="lowfat">Low Fat.</option>
+           <option value="lowsodium">Low Sodium</option>
+         </select> -->
+
+
+
+            <!-- </form> -->
+
+        <section>
+          <div id='showRecipe' class='row pt-5'>
+          </div>
+          <div id='showNutrition' class='row pt-5'>
+            
+   <div id="my-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <!-- <h2>POKEMAN STATS</h2> -->
+      </div>
+      <div class="modal-body" id="modal-body">
+
+        <!-- <h2 class="modalTitle">
+          <p class="modal-id"></p>
+          <p class="modal-name"></p>
+        </h2>
+        <p class="modal-height"></p>
+        <p class="modal-weight"></p>
+        <img class="modal-front-img" src="">
+        <img class="modal-back-img" src="">
+        <p class="modal-type"></p>
+        <p class="modal-basestat"></p>
+        <p class="modal-stat"></p>
+        <p class="modal-ability"></p> -->
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+  </div>
+          </div>
+        </section>
+
+
+        </section>
+        <footer >
+            <div id="edamam-badge" data-color="white"></div>
+        </footer>
+
+        <script src="https://developer.edamam.com/attribution/badge.js"></script>
+        <script src="../mobile/script.js"></script>
+        <script src="../foodrecipes/foodrecipes.js"></script>
+
+      </body>
+
+      </html>
