@@ -36,8 +36,7 @@ document.querySelector('#search').addEventListener('submit', function (e) {
 
 async function fetchData4mAPI(values){
 
-  app_id = 'b27006e5';
-  app_key = '5c244c3380864ec1cf7d78d9b93d518e';
+  
 
   try{
 

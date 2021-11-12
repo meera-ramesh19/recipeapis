@@ -49,8 +49,8 @@ function getphotos() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "x-app-id": "31c0d165",
-            "x-app-key": "8637eb84b2f8b122673898846f1cf458",
+            "x-app-id": "",
+            "x-app-key": "",
             "x-remote-use-id": "0"
           },
           body: JSON.stringify({ query: choice, timezone: "US/Eastern" })

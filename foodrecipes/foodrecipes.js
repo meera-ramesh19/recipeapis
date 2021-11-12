@@ -34,8 +34,7 @@ function changeInput(input, prop, value) {
 async function getRecipe(inpVal,res) {
   document.querySelector("#showRecipe").innerHTML = ""
 
-  app_id = '41c4b815';
-  app_key = 'd550506821dc3eab02ba5bc7fe0cfaad	';
+  
   try{
   url = `https://api.edamam.com/search?q=${inpVal}&app_id=${app_id}&app_key=${app_key}&mealType=${res[0]}`;
     const foodItem = await fetch(url)
